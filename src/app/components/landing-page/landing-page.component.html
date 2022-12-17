@@ -1,0 +1,91 @@
+<header>
+    <nav>
+        <div class="container padding">
+            <div class="first">
+                <span><img class="logo" src="../../../assets/Logo.png" alt="logo"></span>
+                <span>
+                    <mat-icon class="position">home</mat-icon>Home
+                </span>
+                <span>
+                    <mat-icon class="position">people</mat-icon>Trustees
+                </span>
+                <span class="red">
+                    <mat-icon class="position">person</mat-icon>Professionals
+                </span>
+                <span>
+                    <mat-icon class="position">more_horiz</mat-icon>More
+                </span>
+            </div>
+            <div class="second">
+                <span>
+                    <mat-icon class="size">search</mat-icon>
+                </span>
+                <span>
+                    <button color="warn" class="width" mat-raised-button>
+                        <mat-icon>mail</mat-icon> Invite
+                    </button>
+                </span>
+                <span><img class="crop size" src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+                </span>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="mid-section">
+    <div class="container">
+        <mat-card class="example-card">
+            <img class="crop" mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+            <mat-card-content>
+                <mat-card-title>Jone Smith</mat-card-title>
+                <mat-card-subtitle>CFA, CIC</mat-card-subtitle>
+                <mat-card-subtitle>
+                    <mat-icon class="position">star</mat-icon>
+                    Premium member
+                </mat-card-subtitle>
+                <div class="sub-container">
+                    <mat-icon class="position">school</mat-icon>
+                    Insurance Agent, Attorney, Accountant
+                </div>
+            </mat-card-content>
+            <div>
+                <hr>
+            </div>
+            <mat-card-footer>
+                <mat-icon class="position">mail</mat-icon>
+                <span>Send an Email</span>
+            </mat-card-footer>
+        </mat-card>
+        <mat-card class="second-card">
+            <mat-card-header class="header">
+                <h3>Business details</h3>
+            </mat-card-header>
+            <div class="body">
+                <div class="sub-container">
+                    <div class="sub-header">
+                        <div>
+                            <mat-icon class="position olive">person</mat-icon>
+                            <span>Profile</span>
+                        </div>
+                        <div>
+                            <button mat-raised-button color="warn" (click)="openeditDialogBox()">Edit Profile</button>
+                        </div>
+                    </div>
+                    <div>
+                        <hr>
+                    </div>
+                    <div class="sub-body">
+                        <ng-container *ngFor="let item of values">
+                            <div class="content">
+                                <div class="heading">{{item.title}} :</div>
+                                <div class="gap">{{item.value}}</div>
+                                <br>
+                            </div>
+                        </ng-container>
+                    </div>
+
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</section>

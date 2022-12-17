@@ -1,0 +1,42 @@
+<div class="container">
+    <form [formGroup]="editForm" class="form-group">
+        <div class="form-control">
+            <label for="Name">Name</label>
+            <input type="text" name="Name" formControlName="name">
+        </div>
+        <div class="form-control">
+            <label for="Domain">Domain</label>
+            <input type="text" name="Domain" formControlName="domain">
+        </div>
+        <div class="form-control">
+            <label for="Gender">Gender</label>
+            <mat-radio-group name="Gender" formControlName="gender">
+                <mat-radio-button [value]="'Male'">
+                    Male
+                </mat-radio-button>
+                <mat-radio-button [value]="'Female'">
+                    Female
+                </mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <div class="form-control">
+            <label for="Date">Date</label>
+            <mat-form-field>
+                <mat-label>Choose a date</mat-label>
+                <input type="text" matInput [matDatepicker]="picker" name="date" formControlName="dob">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="form-control">
+            <label for="PhoneNumber">PhoneNumber</label>
+            <input type="text" name="PhoneNumber" formControlName="tel">
+        </div>
+        <div class="form-control">
+            <label for="Location">Location</label>
+            <textarea class="size" name="Location" formControlName="location"></textarea>
+        </div>
+        <button [disabled]="!editForm.valid" mat-raised-button (click)="submit()">Save Changes</button>
+    </form>
+</div>

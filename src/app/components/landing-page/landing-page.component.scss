@@ -1,0 +1,239 @@
+header {
+    width: 100%;
+    background-color: white;
+
+    nav {
+        height: 60px;
+    }
+}
+
+.position {
+    position: relative;
+    top: 5px;
+    right: 5px;
+}
+
+.padding {
+    padding: 10px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .first {
+        font-weight: 700;
+
+        .red {
+            color: rgb(183, 7, 7);
+        }
+
+        .logo {
+            position: relative;
+            bottom: 0;
+            right: 8%;
+        }
+
+        span {
+            margin: 0 20px
+        }
+    }
+
+    .second {
+        button {
+            position: relative;
+            bottom: 5px;
+            left: 0px;
+            margin: 0 10px;
+        }
+
+        img {
+            position: relative;
+            bottom: 5px;
+            left: 25px;
+        }
+    }
+
+    .size {
+        height: 35px;
+        width: 35px;
+    }
+}
+
+.crop {
+    position: relative;
+    left: 27%;
+    bottom: 0;
+    clip-path: circle(50% at 50% 50%);
+}
+
+button {
+    width: 150px;
+    background-color: rgb(183, 7, 7) !important;
+}
+
+.width {
+    width: 100px;
+}
+
+.mid-section {
+    width: 85%;
+    margin: 20px auto;
+}
+
+.example-card {
+    width: 320px;
+    height: 380px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .mat-card-subtitle {
+        margin-bottom: 5px;
+    }
+
+    .mat-card-content {
+        margin: 10px 0 0 0;
+    }
+
+    .mat-card-footer {
+        height: 50px;
+        color: rgb(183, 7, 7);
+    }
+}
+
+.second-card {
+    margin-left: 20px;
+    padding: 0px;
+    width: 100%;
+    height: 370px;
+
+    .header {
+        background-color: #80800038;
+        height: 55px;
+
+        h3 {
+            font-weight: bold;
+            position: relative;
+            top: 17px;
+            left: 0px;
+        }
+    }
+
+    .body {
+        width: 95%;
+        margin: 20px auto;
+        height: 270px;
+        border: 1px solid rgba(208, 207, 207, 0.7);
+
+        .sub-container {
+            border-radius: 1px;
+
+            .sub-header {
+                padding: 5px 25px;
+                display: flex;
+                justify-content: space-between;
+
+                .olive {
+                    color: #808000;
+                }
+
+            }
+
+            .sub-body {
+                height: 100%;
+
+                .content {
+                    display: flex;
+                    margin: 8px 0;
+
+                    .heading {
+                        width: 250px;
+                        margin: 0 0 0 20px;
+                        font-weight: bold;
+                    }
+
+                    .gap {
+                        display: inline;
+                        // margin-left: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    * {
+        font-size: 9px;
+    }
+
+    header {
+        nav {
+            height: 120px;
+        }
+    }
+
+    button {
+        width: 20px;
+        height: 25px;
+    }
+
+    .width {
+        width: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+
+        .padding {
+            padding: 0px;
+        }
+
+        .first {
+            span {
+                margin: 0 1%;
+                height: 50px;
+                max-width: 150px;
+            }
+
+            .logo {
+                max-width: 200px;
+            }
+
+            font-weight: 100
+        }
+
+        .second {
+            button {
+                .mat-icon {
+                    position: absolute;
+                }
+            }
+        }
+    }
+
+    .second-card {
+        margin: 5% 0;
+
+        .body {
+            width: 100%;
+
+            .sub-body {
+                .content {
+                    .heading {
+                        width: 100px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .mid-section {
+        width: 100%;
+    }
+
+}
